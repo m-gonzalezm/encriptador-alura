@@ -14,14 +14,14 @@
                 <label for="input-text"></label>
                 <input type="text" id="input-text" placeholder="Ingrese el texto aquí" required>
                 <div class="button-group">
-                    <button id="encoder">Encriptar</button>
-                    <button id="decoder">Desencriptar</button>
+                    <button onclick="encodeText()" id="encoder">Encriptar</button>
+                    <button onclick="decodeText()" id="decoder">Desencriptar</button>
                 </div>
             </fieldset>
         </section>
         <section class="output-section">
             <div>
-                <p>[Mensaje encriptado/desencriptado]</p>
+                <p id="output-text">[Mensaje encriptado/desencriptado]</p>
                 <button>Copiar</button>
             </div>
             <div>
