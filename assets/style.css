@@ -1,0 +1,31 @@
+main {
+    width: 85%;
+    margin: 0 auto;
+    height: 100vh;
+    box-sizing: border-box;
+}
+
+.input-section, .output-section {
+    display: inline-block;
+    background-color: #cccccc;
+}
+
+.input-section {
+    width: 70%;
+}
+
+.input-text {
+    width: 100%;
+    display: block;
+}
+
+.output-section {
+    width: 25%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+h3 {
+    font-size: large;
+    font-weight: bold;
+}
