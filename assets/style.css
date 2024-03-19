@@ -1,5 +1,7 @@
 :root {
     --light-blue-100: #F3F5FC;
+    --light-blue-300: #E9ECF8;
+    --light-blue-400: #AAB2D5;
     --dark-blue-300: #0A3871;
     --dark-blue-400: #072B61;
     --gray-100: #CED4DA;
@@ -101,14 +103,40 @@ main {
     color: white;
 }
 
+#encoder:hover {
+    font-weight: 450;
+    background-color: var(--dark-blue-400);
+}
+
+#encoder:not(:active) {
+    transition: scale 0.01s, background-color 0.3s;
+}
+
+#encoder:active {
+    scale: 0.95;
+}
+
 #decoder {
-    background-color: #D8DFE8;
+    background-color: var(--light-blue-100);
     border: 1px solid var(--dark-blue-300);
     width: 328px;
     height: 67px;
     padding: 24px;
     border-radius: 24px;
     color: var(--dark-blue-300);
+}
+
+#decoder:hover {
+    border-color: var(--dark-blue-400);
+    font-weight: 450;
+}
+
+#decoder:not(:active) {
+    transition: scale 0.01s, border-color 0.3s;
+}
+
+#decoder:active {
+    scale: 0.95;
 }
 
 .output-section {
@@ -118,6 +146,10 @@ main {
     border-radius: 32px;
     background-color: white;
     box-shadow: 0 24px 32px -8px rgba(0, 0, 0, 8%);
+}
+
+.coded-text {
+    display: none;
 }
 
 .coded-text-box {
@@ -152,6 +184,19 @@ main {
     margin: 32px calc((100% - 336px) / 2);
     padding: 24px;
     color: var(--dark-blue-300);
+}
+
+#copier:hover {
+    border-color: var(--dark-blue-400);
+    font-weight: 450;
+}
+
+#copier:not(:active) {
+    transition: scale 0.01s, border-color 0.3s;
+}
+
+#copier:active {
+    scale: 0.95;
 }
 
 .missing-text {

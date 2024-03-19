@@ -25,7 +25,7 @@ document.getElementById("encoder").onclick = function encodeText() {
     showOutputText(encodedText);
 }
 
-document.getElementById("decoder").onclick = function encodeText() {
+document.getElementById("decoder").onclick = function decodeText() {
     text = document.getElementById("input-text").value;
     let decodedText = "";
     for (let letter = 0; letter < text.length; letter++) {
@@ -50,5 +50,12 @@ document.getElementById("decoder").onclick = function encodeText() {
 }
 
 function showOutputText(text) {
-    document.getElementById("output-text").innerHTML = text;
+    if (text) {
+        document.querySelector(".missing-text").style.display = "none";
+        document.querySelector(".coded-text").style.display = "block";
+        document.getElementById("output-text").value = text;
+    } else {
+        document.querySelector(".missing-text").style.display = "block";
+        document.querySelector(".coded-text").style.display = "none";
+    }
 }
