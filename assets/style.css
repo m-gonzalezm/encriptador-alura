@@ -43,6 +43,12 @@ main {
     height: 48px;
 }
 
+.logo-section svg + svg {
+    width: 32px;
+    height: 48px;
+    display: none;
+}
+
 .input-section {
     width: 680px;
     height: 944px;
@@ -173,7 +179,7 @@ main {
     font-size: 24px;
 }
 
-#output-text:focus{
+#output-text:focus {
     outline: none;
 }
 
@@ -226,4 +232,116 @@ main {
 .missing-text p {
     color: var(--gray-400);
     margin-top: 16px;
+}
+
+@media screen and (max-width: 376px) {
+    main {
+        display: block;
+    }
+
+    body {
+        width: 375px;
+        height: auto;
+    }
+
+    .logo-section, .input-section {
+        width: 100%;
+        height: auto;
+        margin: 0;
+    }
+
+    .logo-section {
+        height: 96px;
+        margin: 0;
+    }
+
+    .logo-section svg {
+        display: none;
+    }
+
+    .logo-section svg + svg {
+        display: block;
+        margin: 24px 0 0 16px;
+    }
+
+    .input-section {
+        margin: 56px 0 0 16px;
+    }
+
+    .input-text-box, #encoder, #decoder, #copier {
+        width: 343px;
+    }
+
+    .input-text-box {
+        height: 267px;
+    }
+
+    #input-text {
+        width: 339px;
+    }
+    
+    #encoder {
+        margin: 0;
+    }
+
+    #decoder {
+        margin-top: 24px;
+    }
+    
+    .output-section {
+        width: auto;
+        display: flex;
+        height: auto;
+        margin: 64px 16px 32px 16px;
+    }
+
+    .coded-text {
+        display: none;
+        min-height: 267px;
+    }
+
+    .coded-text-box {
+        width: 279px;
+        min-height: 267px;
+        height: auto;
+        margin: 32px 32px 0 32px;
+    }
+
+    #output-text {
+        width: 275px;
+        min-height: 267px;
+        height: auto;
+        resize: none;
+    }
+
+    #copier {
+        width: 279px;
+        margin: 32px;
+    }
+
+    .missing-text {
+        width: 327px;
+        height: auto;
+    }
+
+    .missing-message {
+        width: 263px;
+        height: 122px;
+        margin: 32px;
+    }
+
+    .missing-message h2 {
+        height: 58px;
+    }
+    
+    /* Texto no centrado */
+
+    .missing-message p {
+        height: 48px;
+        margin: 16px 0 0 0;
+    }
+
+    .missing-svg {
+        display: none;
+    }
 }
