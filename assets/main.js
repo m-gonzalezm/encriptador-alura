@@ -59,3 +59,7 @@ function showOutputText(text) {
         document.querySelector(".coded-text").style.display = "none";
     }
 }
+
+document.getElementById("input-text").addEventListener('input', function (event) {
+    this.value = this.value.match(/^[A-Za-zñ¡!¿? ,.']+$/) ? this.value.toLowerCase() : this.value.slice(0, -1);
+});
