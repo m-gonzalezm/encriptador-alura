@@ -1,3 +1,18 @@
+function showOutputText(text) {
+    if (text) {
+        document.querySelector(".missing-text").style.display = "none";
+        document.querySelector(".coded-text").style.display = "block";
+        document.getElementById("output-text").value = text;
+    } else {
+        document.querySelector(".missing-text").style.display = "block";
+        document.querySelector(".coded-text").style.display = "none";
+    }
+}
+
+document.getElementById("input-text").addEventListener('input', function (event) {
+    this.value = this.value.match(/^[A-Za-zñ¡!¿? ,.']+$/) ? this.value.toLowerCase() : this.value.slice(0, -1);
+});
+
 document.getElementById("encoder").onclick = function encodeText() {
     let text = document.getElementById("input-text").value;
     let encodedText = "";
@@ -49,17 +64,6 @@ document.getElementById("decoder").onclick = function decodeText() {
     showOutputText(decodedText);
 }
 
-function showOutputText(text) {
-    if (text) {
-        document.querySelector(".missing-text").style.display = "none";
-        document.querySelector(".coded-text").style.display = "block";
-        document.getElementById("output-text").value = text;
-    } else {
-        document.querySelector(".missing-text").style.display = "block";
-        document.querySelector(".coded-text").style.display = "none";
-    }
+document.getElementById("copier").onclick = function copyToClipboard() {
+    navigator.clipboard.writeText(document.getElementById("output-text").value);
 }
-
-document.getElementById("input-text").addEventListener('input', function (event) {
-    this.value = this.value.match(/^[A-Za-zñ¡!¿? ,.']+$/) ? this.value.toLowerCase() : this.value.slice(0, -1);
-});
