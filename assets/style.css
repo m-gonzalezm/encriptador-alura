@@ -4,6 +4,7 @@
     --light-blue-400: #AAB2D5;
     --dark-blue-300: #0A3871;
     --dark-blue-400: #072B61;
+    --dark-blue-500: #052051;
     --gray-100: #CED4DA;
     --gray-400: #495057;
     --gray-500: #343A40;
@@ -106,14 +107,15 @@ main {
 #encoder:hover {
     font-weight: 450;
     background-color: var(--dark-blue-400);
+    cursor: pointer;
 }
 
 #encoder:not(:active) {
-    transition: scale 0.01s, background-color 0.3s;
+    transition: background-color 0.3s;
 }
 
 #encoder:active {
-    scale: 0.95;
+    background-color: var(--dark-blue-500);
 }
 
 #decoder {
@@ -129,14 +131,15 @@ main {
 #decoder:hover {
     border-color: var(--dark-blue-400);
     font-weight: 450;
+    cursor: pointer;
 }
 
 #decoder:not(:active) {
-    transition: scale 0.01s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 #decoder:active {
-    scale: 0.95;
+    background-color: var(--light-blue-300);
 }
 
 .output-section {
@@ -189,14 +192,15 @@ main {
 #copier:hover {
     border-color: var(--dark-blue-400);
     font-weight: 450;
+    cursor: pointer;
 }
 
 #copier:not(:active) {
-    transition: scale 0.01s, border-color 0.3s;
+    transition: background-color 0.3s, border-color 0.3s;
 }
 
 #copier:active {
-    scale: 0.95;
+    background-color: var(--light-blue-100);
 }
 
 .missing-text {
